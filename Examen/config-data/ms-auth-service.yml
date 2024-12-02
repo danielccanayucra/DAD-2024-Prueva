@@ -1,0 +1,21 @@
+server:
+
+  port: ${PORT:${SERVERS_PORT:0}}
+
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jdcy_auth
+    username: root
+    password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1027/eureka
+  instance:
+    hostname: localhost
